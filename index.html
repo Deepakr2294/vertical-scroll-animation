@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Slider</title>
+<style>
+    body {
+        align-items: center;
+        background: #e3e3e3;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        margin: 0;
+    }
+    @-webkit-keyframes scroll {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        100% {
+            -webkit-transform: translateY(calc(-100px * 7));
+            transform: translateY(calc(-100px * 7));
+        }
+    }
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+        100% {
+            -webkit-transform: translateY(calc(-100px * 7));
+            transform: translateY(calc(-100px * 7));
+        }
+    }
+    .slider {
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 500px; /* Adjusted height */
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 250px;
+    }
+    .slider::before,
+    .slider::after {
+        background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
+        content: "";
+        height: 200px;
+        position: absolute;
+        width: 250px;
+        z-index: 2;
+    }
+    .slider::after {
+        bottom: 0;
+        left: 0;
+        -webkit-transform: rotateZ(180deg);
+        transform: rotateZ(180deg);
+    }
+    .slider::before {
+        top: 0;
+        left: 0;
+    }
+    .slider .slide-track {
+        -webkit-animation: scroll 40s linear infinite;
+        animation: scroll 40s linear infinite;
+        display: flex;
+        flex-direction: column;
+        height: calc(100px * 14); /* Adjusted height */
+    }
+    .slider .slide {
+        height: 100px;
+        width: 250px;
+    }
+</style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://img.freepik.com/free-photo/casual-hologram-job-consultant-standing_1134-691.jpg?t=st=1723892266~exp=1723895866~hmac=1a7162f4b5611f7be1bae1564e25fb4955026cc2a169183e645e8711bd7dcd4f&w=740" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn/io/557257/5.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png" height="100" width="250" alt="" />
+          </div>
+        </div>
+      </div>
+    
+</body>
+</html>
